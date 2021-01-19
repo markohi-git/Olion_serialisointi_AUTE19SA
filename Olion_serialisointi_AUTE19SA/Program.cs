@@ -11,6 +11,7 @@ namespace Olion_serialisointi_AUTE19SA
     class Program
     {
         private static Viesti v;
+        private static List<Viesti> l;
 
         static void Main(string[] args)
         {
@@ -25,7 +26,7 @@ namespace Olion_serialisointi_AUTE19SA
         }
         public static void Tallenna()
         {
-            string json = JsonConvert.SerializeObject(v,Formatting.Indented);
+            string json = JsonConvert.SerializeObject(l,Formatting.Indented);
             //Console.WriteLine(json);
             File.WriteAllText(@"c:\viesti.json", json);
         }
